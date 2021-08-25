@@ -1,0 +1,9 @@
+## GIT : 처음 아이디 연동
+
+```bash
+git config --global core.autocrlf true
+git config --global user.name 'jhy979'
+git config --global user.email 'jhy979@gmail.com'
+git remote add origin "복사주소" #origin은 별칭입니다!
+git init #추적 시작
+```
