@@ -147,6 +147,94 @@
 
 ## 6. **Operating System Structure**
 
+- `멀티 프로그래밍` : 여러 프로그램을 메모리에 로드해두고 프로세스 대기 상태 시 다른 프로세스 작업을 수행해요.
+- `시분할 (Time Sharing)`
+    - 멀티태스킹이예요.
+    - 프로세스마다 작업 시간 정해두고 번갈아 가면서 작업해요.
+    - Response Time을 줄이는 것이 중요해요.
+    - 마치 동시에 작동하는 것처럼 보이게 해요.
+
+❗ `가상 메모리 사용`
+
+- 너무 많은 메모리를 사용하면 Response Time을 줄이기 위해 가상 메모리를 사용해요.
+- 보조 기억 장치의 일부를 마치 메인 메모리처럼 사용하는 기술이예요.
+
+👉 `CPU 스케줄링, 작업 스케줄링`
+
+- 이렇게 동시에 메모리에 여러 작업을 올리므로 메모리가 부족할 수 있어요.
+- 이 때 어느 작업을 먼저 처리할지 고민해야합니다.
+
+---
+
 ## 7. **Operating-System Operations**
 
+- OS는 인터럽트 주도적이예요.
+- 즉, 시스템은 인터럽트를 기다립니다.
+- OS와 User는 컴퓨터 자원을 공유하기 때문에 User Program이 오류를 일으키지 않도록 방지해야 해요.
+
+---
+
 ## 8. **Dual-Mode and Multimode Operation**
+
+👉 User Program이 시스템에 접근하지 못하도록 Mode를 나눠요.
+
+### Kernel Mode
+
+- mode bit == 0
+- 커널 모드일 때에만 Privileged instruction(특권 명령)을 실행해요.
+- 믿을 수 있는 친구구나!
+
+### User Mode
+
+- mode bit == 1
+- 너는 나쁜 의도를 가지고 있을 수도 있겠어.
+- 순수한 친구들이 커널 모드 쓰고 싶으면 `시스템 콜`을 사용해야 해요.
+
+---
+
+## 9. **Timer**
+
+- User program이 OS에게 제어권을 넘겨주지 않는 상황을 방지하기 위해 타이머를 사용해요. (혼자 독식하려는 나쁜 친구들)
+- 특정 주기마다 타이머를 발생시켜 인터럽트가 발생해요.
+
+ 
+
+---
+
+## 10. Process Management
+
+- on 디스크 → Program
+- on 메모리 → Process
+- 1프로그램이라도 多프로세스가 가능해요. (브라우저 창 여러 개 띄워두는 느낌)
+
+---
+
+## 11. Memory Management
+
+---
+
+## 12. Storage Management
+
+### File-System Management
+
+### Mass-Storage Management
+
+### Caching
+
+### I/O System
+
+---
+
+## 13. Protection and Security
+
+---
+
+## 14. Kernel Data Structures
+
+---
+
+## 15. Computing Environments
+
+---
+
+## 16. Open-Source Operating Systems
